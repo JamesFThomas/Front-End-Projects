@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* Initial setting for body element of page */
+body {
+  background-image: linear-gradient(90deg, #7d5fff, #7158e2);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Initial setting for div with search class */
+.search {
+  position: relative;
+  height: 50px;
+}
+
+/* Initial setting for text input box */
+.search .input {
+  background-color: #fff;
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  height: 50px;
+  width: 50px;
+  /* transform width of text input */
+  transition: width 0.3s ease;
+}
+
+/*  Initial Styling for button */
+.btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  /* speed of button movement when input expands */
+  transition: transform 0.3s ease;
+}
+
+/* Remove outline from text input when button & text input in focus state */
+.btn:focus,
+.input:focus {
+  outline: none;
+}
+
+/* expand the text input field when active class added to div with search class */
+.search.active .input {
+  width: 200px;
+}
+
+/* move button to the left when active class added to div with search class */
+.search.active .btn {
+  transform: translateX(198px);
+}
